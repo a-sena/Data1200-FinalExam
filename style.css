@@ -1,0 +1,1494 @@
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height:1.5
+}
+body{
+   display: grid;
+   height: 2000px; 
+   grid-template-areas: 
+     "header"
+     "content"
+     "footer";
+   grid-template-rows: 100px 1fr 400px;
+  
+ 
+
+}
+#content{
+  grid-area: content;
+   display: grid;
+   grid-template-rows: 3fr 7fr ;
+   background: lightgrey;
+
+
+}
+
+.sidebar {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #99bbff;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   border: 1px dotted black;
+ }
+ 
+ .sidebar a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: white;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidebar a:hover {
+   color: white;
+ }
+ 
+ .sidebar .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+ 
+ #mySidebar ul li a:hover{
+   background:#fff;
+   border-radius: 2px;
+ }
+ 
+ .openbtn {
+   font-size: 26px;
+   cursor: pointer;
+   background-color: #99bbff;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+ }
+ 
+ .openbtn:hover {
+   background-color: white;
+ }
+ 
+ #main {
+   position: fixed;
+   transition: margin-left 0.5s;
+   padding: 24px;
+   width: 100%;
+   top: 0px;
+   left: 0px;
+   background-color: #99bbff;
+   min-height: 103px;
+ }
+ 
+ .logo{
+     position: fixed;
+     display: block;
+     max-width: 125px;
+     display: inline;
+     right: 5px;
+     top: 5px;
+ }
+ 
+ .header{
+     grid-area: header;
+     position: fixed;
+     top: 0px;
+     width: 100%;
+     z-index: 99;
+     display: flex; 
+ }
+.intro{
+  
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   position: relative;
+   background: grey;
+     
+}
+.intro:before{
+   content: '';
+   background: url(images/1homepage.jpg) no-repeat center center/cover;
+   opacity: 0.4;
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+       
+.article {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+   grid-template-rows: 50px 2fr 3fr 2fr;
+   grid-gap: 1rem;
+   margin-left: 10vw;
+   margin-right: 10vw;
+   border: none;
+   margin-bottom: 1rem;
+}
+
+.article > div:nth-child(1){
+   grid-column: 1/span 3;
+}
+
+.article > div:nth-child(2){
+   grid-column: 1/span 2;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.article > div:last-child{
+   grid-column-start: 4 ;
+   grid-column-end: 2;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.article > div:nth-child(3){
+   background: rgb(53, 51, 51);
+   border-radius: 0 2rem 0 2rem;
+   color: white;
+}
+
+.article > div:nth-child(7){
+   background: rgb(202, 81, 81);
+   border-radius:  2rem 0 2rem 0 ;
+   color: white;
+}
+
+.article > div{
+   border: none;
+   background: white;
+   display: flex;
+   flex-direction: column;
+   padding: 0.5rem;
+}
+
+/*<------WELCOME---------->*/
+.article .contentTittel{
+   background: none;
+   padding: 20px 30px;
+}
+
+.article .contentTittel h3{
+   font-size: 2rem;
+   font-weight: bolder;
+}
+
+.article .contentBox img{
+  height: 260px;
+}
+
+.article .contentBox .boxInclusive{
+   border: none;
+   background: none;
+   margin: 0.75rem;
+   height: 100%;
+}
+
+.article .contentBox .boxInclusive h5{
+   margin-bottom: 40px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient;
+   font-family: 'Oswald', sans-serif;
+}
+
+.article,a{
+  text-decoration: none;
+}
+
+.article .contentBox .button h5 {
+  margin: auto;
+  margin-top: 40px;
+}
+
+.article .contentBox .button h5 {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #66bbff;
+  border: none;
+  color: #000;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+    
+.article .contentBox .button h5:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #66bbff;
+  color: #66bbff;
+}
+    
+.article .contentBox .button h5:after {
+  content: "";
+  background: #66bbff;
+  color: #ffff;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+    
+.article .contentBox .button h5:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+    
+.article .contentBox .button h5:focus { outline:0; }
+
+.article .contentBox h3{
+   font-size: 1.5rem;
+   margin:  0.5rem 0.25rem;
+}
+
+/*Hover effekter til sidebar*/
+
+#welcome:hover {
+   background-color: white;
+   color:  #99bbff;
+}
+
+#reflectionessay:hover {
+   background-color: white;
+   color:  #99bbff;
+}
+
+#accessibility:hover {
+   background-color: white;
+   color:  #99bbff;
+}
+
+#topicalinfo:hover {
+   background-color: white;
+   color:  #99bbff;
+}
+
+#fun:hover {
+   background-color: white;
+   color:  #99bbff;
+}
+
+/*Hover effekter til sidebar slutt*/
+
+
+
+/*CSS til reflection essay page*/
+.essaytext {
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-top: 30px;
+   line-height: 1.5;
+}
+
+#headingessay {
+   text-align: center;
+   font-size: 45px;
+}
+
+.reflectionessay-h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#freetime {
+  text-align: center;
+  font-size: 30px;
+}
+
+.avsnitt1 {
+  width: 100%;
+  background-color: #99bbff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.avsnitt2 {
+   width: 100%;
+   background-color: #99bbff;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+ }
+
+ .avsnitt3 {
+   width: 100%;
+   background-color: #99bbff;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+ }
+
+ .avsnitt4 {
+   width: 100%;
+   background-color: #99bbff;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+ }
+
+ .bildeavsnitt1 {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: auto;
+    max-height: 90%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .bildeavsnitt2 {
+   margin-right: 10px;
+   margin-left: 5px;
+   margin-bottom: 5px;
+   height: auto;
+   max-height: 90%;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.bildeavsnitt3 {
+   margin-right: 5px;
+   margin-left: 5px;
+   margin-bottom: 5px;
+   height: auto;
+   max-height: 90%;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.bildeavsnitt4 {
+   margin-right: 10px;
+   margin-left: 5px;
+   margin-bottom: 5px;
+   height: auto;
+   max-height: 90%;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/*CSS til reflection essay page slutt*/
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+  
+  *{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+    font-size: 16px;
+ }
+ 
+ body{
+     display: grid;
+     grid-template-areas: 
+     "header"
+     "content"
+     "footer";
+     height: auto;
+     grid-template-columns: 1fr;
+     grid-template-rows: 150px 1fr auto;
+ 
+ }
+ #content{
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto 1fr ;
+    background: lightgrey;
+
+}
+.intro{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
+ background: grey;
+   
+}
+
+.intro:before{
+ content: '';
+ background: url(./images/1homepage.jpg) no-repeat center center/cover;
+ opacity: 0.4;
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+.article{
+ display: grid;
+ grid-template-columns: repeat(1,1fr);
+ grid-template-rows: repeat(7,auto);
+ grid-gap: 1rem;
+ margin-left: 1vw;
+ margin-right: 1vw;
+ border: none;
+ margin-bottom: 1rem;
+}
+.article > div:nth-child(1){
+ grid-column: 1/span 1;
+}
+.article > div:nth-child(2){
+ grid-column: 1/span 1;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.article > div:last-child{
+ grid-column-start: 1 ;
+ grid-column-end: 2;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.article > div:nth-child(3){
+ background: rgb(53, 51, 51);
+ border-radius: 0 2rem 0 2rem;
+ color: white;
+}
+.article > div:nth-child(7){
+ background: rgb(202, 81, 81);
+ border-radius:  2rem 0 2rem 0 ;
+ color: white;
+}
+.article > div{
+ border: none;
+ background: white;
+ display: flex;
+ flex-direction: column;
+ padding: 0.5rem;
+ 
+}
+.article .contentTittel{
+ background: none;
+ padding: 20px 30px;
+
+}
+.article .contentTittel h3{
+ font-size: 2rem;
+ font-weight: bolder;
+}
+.article .contentBox img{
+ height: 260px;
+ width: 100%;
+ 
+}
+.article .contentBox .boxInclusive{
+ border: none;
+ background: none;
+ margin: 0.75rem;
+}
+
+.article .contentBox h5{
+ display: block;
+ width: 70%;
+ padding: 0.25rem 1rem;
+ border-radius: 1rem;
+}
+.article .contentBox h3{
+ font-size: 1.5rem;
+ margin:  0.5rem 0.25rem;
+}
+
+/*
+REFLECTIOIN ESSAY 600px--
+*/
+
+.reflectionessay-title {
+  margin: auto;
+  text-align: center;
+  padding-top: 2rem;
+  border-bottom: 3px solid black;
+  display: table;
+  margin-bottom: 2rem;
+}
+
+.essaytext {
+line-height: 1.5;
+padding-bottom: 2rem;
+margin: auto;
+max-width: 95vw;
+}
+
+.reflectionessay-text1 {
+padding-top: 1rem;
+padding-left: 1rem;
+padding-right: 1rem;
+order: 1;
+}
+
+.reflectionessay-text2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.reflectionessay-text3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.reflectionessay-text4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.reflectionessay-paragraph{
+padding-top: 2rem;
+}
+
+.reflectionessay-h2 {
+  font-size: 26px;
+}
+
+
+.avsnitt1 {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+}
+ 
+.avsnitt2 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+}
+ 
+.avsnitt3 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+}
+ 
+.avsnitt4 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+}
+
+.bildeavsnitt1 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt3 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt4 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+/*
+REFLECTIOIN ESSAY 600px--
+*/
+
+/*
+TOPICAL INFORMATION CSS 600px--
+*/
+
+.topicalinfo-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 95vw;
+}
+
+.topicalinfo-header {
+  margin-bottom: 2rem;
+  font-size: 64px;
+  border-bottom: 3px solid black;
+}
+
+.topicalinfo-paragraph {
+  max-width: 70ch;
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+
+.topicalinfo-flexbox {
+  display: grid;
+}
+
+.topicalinfo-question1{
+    width: 90%;
+    text-align:left; 
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: white;
+    grid-template-columns: repeat(1, 2fr);
+}
+
+.topicalinfo-question1 h3{
+    font-size: 21px;
+    max-width: 100%;
+    padding-bottom: 2rem;
+}
+
+.topicalinfo-question2 h3{
+  font-size: 21px;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.topicalinfo-question2{
+    width: 90%;
+    text-align:left; 
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.topicalinfo-img1 {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 2rem;
+  object-fit: contain;
+}
+
+.topicalinfo-img2 {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 2rem;
+  order: 2;
+  object-fit: contain;
+}
+
+/*
+TOPICAL INFORMATION CSS 600px--
+*/
+
+
+/*
+ACCESIBILITY PAGE CSS 600px--
+*/
+
+.accessibility-title {
+  padding: 2rem;
+}
+
+.accessibility-container {
+  margin: 2rem auto 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 95vw;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px darkgrey;
+}
+
+.accessibility-title{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+}
+
+.accessibility-subheader {
+  padding-bottom: 2rem;
+}
+
+.accessibility-info1 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-info2 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-info3 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-paragraph {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.accessibility-text {
+  justify-content: center;
+}
+
+.accessibility-img1 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.accessibility-img2 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.accessibility-img3 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-top: 2rem;
+  order: 2;
+}
+
+.accessibility-paragraph3 {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  order: 1;
+}
+
+/*
+ACCESIBILITY PAGE CSS 600px--
+*/
+
+}
+
+
+
+
+
+
+@media  only screen and  (max-width:960px) and (min-width:600px){
+
+
+.reflectionessay-title {
+  margin: auto;
+  text-align: center;
+  padding-top: 2rem;
+  border-bottom: 3px solid black;
+  display: table;
+}
+
+.essaytext {
+line-height: 1.5;
+max-width: 80%;
+padding-bottom: 2rem;
+margin: auto;
+}
+
+.reflectionessay-text1 {
+padding: 2rem;
+order: 1;
+}
+
+.reflectionessay-text2 {
+padding: 2rem;
+order: 1;
+}
+
+.reflectionessay-text3 {
+padding: 2rem;
+order: 1;
+}
+
+.reflectionessay-text4 {
+padding: 2rem;
+order: 1;
+}
+
+.reflectionessay-paragraph{
+padding-top: 2rem;
+}
+
+
+.avsnitt1 {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+}
+ 
+.avsnitt2 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+
+}
+ 
+.avsnitt3 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+
+}
+ 
+.avsnitt4 {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+background-color: #99bbff;
+
+}
+
+
+.bildeavsnitt1 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt3 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+.bildeavsnitt4 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  order: 2;
+}
+
+/*
+REFLECTIOIN ESSAY 960px - 600px
+*/
+
+
+/*
+TOPICAL INFORMATION CSS 600px - 960px
+*/
+.topicalinfo-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 85vw;
+}
+
+.topicalinfo-header {
+  margin-bottom: 2rem;
+  font-size: 64px;
+  border-bottom: 3px solid black;
+}
+
+.topicalinfo-paragraph {
+  max-width: 70ch;
+  line-height: 1.5;
+  padding-top: 1rem;
+  grid-template-columns: repeat(1, 2fr);
+}
+
+.topicalinfo-text1 {
+  padding-left: 2rem;
+}
+
+.topicalinfo-text2 {
+  padding-right: 2rem;
+  order: 1;
+}
+
+.topicalinfo-flexbox {
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+}
+
+.topicalinfo-question1{
+    width: 90%;
+    left: 50%;
+    transform: translate(-50,-50);
+    text-align:left; 
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+}
+
+.topicalinfo-question1 h3{
+    font-size: 21px;
+    padding-bottom: 2rem;
+}
+
+.topicalinfo-question2 h3{
+  font-size: 21px;
+  padding-bottom: 2rem;
+}
+
+.topicalinfo-question2{
+    width: 90%;
+    left: 50%;
+    transform: translate(-50,-50);
+    text-align:left; 
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.topicalinfo-img1 {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 2rem;
+  object-fit: contain;
+}
+
+.topicalinfo-img2 {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding-top: 2rem;
+  object-fit: contain;
+  order: 2;
+}
+
+/*
+TOPICAL INFORMATION CSS 600px - 960px
+*/
+
+
+/*
+ACCESIBILITY PAGE CSS 600px - 960px
+*/
+.accessibility-title {
+  padding: 2rem;
+}
+
+.accessibility-container {
+  margin: 2rem auto 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 85vw;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px darkgrey;
+}
+
+.accessibility-title{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+}
+
+.accessibility-subheader {
+  padding-bottom: 2rem;
+}
+
+.accessibility-info1 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-info2 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-info3 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+  border-bottom: 1px solid darkgrey;
+}
+
+.accessibility-paragraph {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.accessibility-text {
+  justify-content: center;
+}
+
+.accessibility-img1 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.accessibility-img2 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.accessibility-img3 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-top: 2rem;
+  order: 2;
+}
+
+.accessibility-paragraph3 {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  order: 1;
+}
+
+/*
+ACCESIBILITY PAGE CSS 960PX++
+*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 960px) {
+
+
+/*
+REFLECTIOIN ESSAY 960px++
+*/
+
+.reflectionessay-title {
+  margin: auto;
+  text-align: center;
+  padding-top: 2rem;
+  border-bottom: 3px solid black;
+  display: table;
+}
+
+.essaytext {
+line-height: 1.5;
+max-width: 80%;
+padding-bottom: 2rem;
+margin: auto;
+}
+
+.reflectionessay-text1 {
+padding: 2rem;
+}
+
+.reflectionessay-text2 {
+padding: 2rem;
+}
+
+.reflectionessay-text3 {
+padding: 2rem;
+order: 2;
+}
+
+.reflectionessay-text4 {
+padding: 2rem;
+order: 2;
+}
+
+.reflectionessay-paragraph{
+padding-top: 2rem;
+}
+
+
+.avsnitt1 {
+background-color: #99bbff;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+ 
+.avsnitt2 {
+width: 100%;
+background-color: #99bbff;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+ 
+.avsnitt3 {
+width: 100%;
+background-color: #99bbff;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+}
+ 
+.avsnitt4 {
+width: 100%;
+background-color: #99bbff;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.bildeavsnitt1 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  order: 2;
+  object-fit: contain;
+}
+
+.bildeavsnitt2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  order: 2;
+  object-fit: contain;
+}
+
+.bildeavsnitt3 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  order: 1;
+  object-fit: contain;
+}
+
+.bildeavsnitt4 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  order: 1;
+  object-fit: contain;
+}
+
+/*
+REFLECTIOIN ESSAY 960px++
+*/
+
+
+/*
+TOPICAL INFORMATION CSS 960px++
+*/
+.topicalinfo-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70vw;
+}
+
+.topicalinfo-header {
+  margin-bottom: 2rem;
+  font-size: 64px;
+  border-bottom: 3px solid black;
+}
+
+.topicalinfo-paragraph {
+  max-width: 70ch;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(1, 2fr);
+}
+
+.topicalinfo-text1 {
+  padding-left: 2rem;
+}
+
+.topicalinfo-text2 {
+  padding-right: 2rem;
+  order: 1;
+}
+
+.topicalinfo-flexbox {
+  grid-template-columns: repeat(2, 2fr);
+  display: grid;
+  overflow: hidden;
+}
+
+.topicalinfo-question1{
+    width: 90%;
+    text-align:left;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: #99bbff;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    background: linear-gradient(90deg, #99bbff 50%, whitesmoke 50%);
+}
+
+.topicalinfo-question1 h3{
+    font-size: 21px;
+    padding-bottom: 2rem;
+}
+
+.topicalinfo-question2 h3{
+  font-size: 21px;
+  padding-bottom: 2rem;
+}
+
+.topicalinfo-question2{
+    width: 90%;
+    left: 50%;
+    text-align:left; 
+    padding: 2em;
+    margin-bottom: 2em;
+    background-color: #99bbff;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: linear-gradient(90deg, whitesmoke 50%, #99bbff 50%);
+}
+
+.topicalinfo-img1 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding-right: 2rem;
+  object-fit: cover;
+}
+
+.topicalinfo-img2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  object-fit: cover;
+  order: 2;
+}
+/*
+TOPICAL INFORMATION CSS 960px+++
+*/
+
+
+
+/*
+ACCESIBILITY PAGE CSS 960PX++
+*/
+.accessibility-title {
+  padding: 2rem;
+}
+
+.accessibility-container {
+  margin: 2rem auto 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 70vw;
+  background-color: white;
+  box-shadow: 0px 0px 0px 1px darkgrey;
+}
+
+.accessibility-title{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+}
+
+.accessibility-subheader {
+  padding-bottom: 2rem;
+}
+
+.accessibility-info1 {
+  padding: 2rem;
+  grid-template-columns: repeat(1, 2fr);
+  display: grid;
+}
+
+.accessibility-info2 {
+  padding: 2rem;
+  grid-template-columns: repeat(2, 2fr);
+  display: grid;
+}
+
+.accessibility-info3 {
+  padding: 2rem;
+  grid-template-columns: repeat(2, 2fr);
+  display: grid;
+}
+
+.accessibility-paragraph {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.accessibility-text {
+  justify-content: center;
+}
+
+.accessibility-img1 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.accessibility-img2 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-right: 2rem;
+}
+
+.accessibility-paragraph3 {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  order: 1;
+}
+
+.accessibility-img3 {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  padding-left: 2rem;
+  order: 2;
+}
+/*
+ACCESIBILITY PAGE CSS 960PX++
+*/
+
+}
+
+
+
+
+
+
+
+/***************
+FOOTER
+***************/
+
+footer {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background: #99bbff;
+   height: 15rem;
+   padding: 0.5rem;
+   padding-top: 2rem;
+ }
+ 
+ footer .SoMe,
+ footer .foot_menu {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 0;
+   flex-wrap: wrap;
+ }
+ 
+ footer .SoMe li,
+ footer .foot_menu li {
+   list-style: none;
+ }
+ 
+ footer .SoMe li a {
+   font-size: 3rem;
+   color: #f4f4f4;
+   margin: 0 0.7rem;
+   display: inline-block;
+   transition: 0.5s;
+ }
+ 
+ footer .SoMe li a:hover {
+   transform: translateY(-7px);
+ }
+ 
+ footer .foot_menu li a {
+   font-size: 1.5rem;
+   color: #f4f4f4;
+   margin: 0 0.5rem;
+   display: inline-block;
+   text-decoration: none;
+   opacity: 0.7;
+ }
+
+ footer .foot_menu li a:hover {
+   opacity: 100;
+ }
+
+
+

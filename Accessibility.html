@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Final Exam</title>
+<link rel="stylesheet" type="text/css" href="style.css"    >
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  </style>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+    function hiddenMenu(){
+      document.getElementById("hidden").style.display = "none";
+    }
+    function showMenu(){
+      document.getElementById("hidden").style.display = "";
+    }
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav();showMenu();">x</a>
+      <a id="welcome" href="index.html">Welcome</a>
+      <a id="reflectionessay" href="Reflectionessay.html">Reflection Essay</a>
+      <a id="accessibility" href="Accessibility.html">Accessibility</a>
+      <a id="topicalinfo" href="topicalinfo.html">Topical info</a>
+      <a id="fun" href="fun.html">Fun</a>
+    </div>
+    <header class="header">
+    <div id="main">
+      <button class="openbtn" id = "hidden"; onclick="openNav();hiddenMenu();">☰</button>  
+    </div>
+    <a href="index.html"><img class="logo" src="images/oslomet.png" /></a>
+    </header>
+
+  <div id="header"></div>
+    <div id="content">
+   
+<div class="intro"></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="accessibility-container">
+<div class="accessibility-title">
+<h1 class="accessibility-title">ACCESSIBILITY</h1>
+<p class="accessibility-paragraph">Accessibility is a very important concept to consider when coding. Digital applications can be used by everyone if they are made for it.
+  And if we can help everyone have access to something we should do it, especially if the application is something important like a government website. 
+  Most website should be made considering accessibility issues so that everyone can make use of the internet.</p>
+
+</div>
+<div class="accessibility-info1">
+    <img src="images/Accesibility4.jpg" id="contentimage" class="accessibility-img1"></img>
+    <p class="accessibility-paragraph">
+    </p>
+
+</div>
+<div class="accessibility-info2">
+    <img src="images/Accesibility3.jpg" id="contentimage" class="accessibility-img2"></img>
+<div class="accessibility-text">
+<h3 class="accessibility-subheader">What Is Accessibility</h3>
+<p class="accessibility-paragraph">Accessibility is the concept of making something that is usable by people with disabilities that would otherwise stop them from using it if they were not considered when making it.
+ For example, making a staircase. If you just make the staircase, it would be difficult for people that are in a wheelchair to make it to the second floor. 
+  Too follow the principles of accessibility you have too also make an elevator or a ramp. When it comes to accessibility in web design the most affected disabilities
+  are visual ones, like poor eyesight or color blindness. There are two core concepts that is key when it comes to accessibility universal design and inclusive design.
+ Universal design is about making something usable by the most amount of people without specialized design. Inclusive design is about making the product available to
+  as many users as possible.</p>
+</div>
+</div>
+<div class="accessibility-info3">
+    <img src="images/Accesibility1.jpg" id="contentimage" class="accessibility-img3">
+    <div class="accessibility-text">
+    <h3 class="accessibility-subheader">Our experience</h3>
+    <p class="accessibility-paragraph3">For the accessibility for our website, we decide to make a website based on universal design and not include any inclusive design. 
+      Since our website is not something important that everyone needs to access, it is easier to make it based on a universal design. 
+      We decided to make a website that is compliant with AA level according too WCAG 2.1. We saw this as a level we could obtain relatively easily since the website
+      doesn’t include videos, sound, moving objects or flashing colors. Too check how accessible our pages where we used a chrome extension called “wave”.
+      With this we found that we hadn’t considered the contrast of the text and the background color. Other accessibility solutions like alternative text for images or,
+      having the website work with keyboard navigations We originally had a light color as the background for the white text which did not have a high enough contrast
+      with the background, so we changed the text from white to black. There are a lot of accessibility problems that seem small and insignificant to those
+      that do not have the disability those problems are caused by. This makes them difficult to identify but, just because it is difficult doesn’t mean we shouldn’t do it.</p>
+  </div>
+</div>
+
+
+<footer>
+  <ul class="SoMe">
+    <li>
+      <a href="https://www.facebook.com/"
+        ><ion-icon name="logo-facebook"></ion-icon
+      ></a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/"
+        ><ion-icon name="logo-linkedin"></ion-icon
+      ></a>
+    </li>
+    <li>
+      <a href="https://twitter.com/"
+        ><ion-icon name="logo-twitter"></ion-icon
+      ></a>
+    </li>
+  </ul>
+  <ul class="foot_menu">
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="Reflectionessay.html">Reflection</a></li>
+    <li><a href="Accessibility.html">Accessibility</a></li>
+    <li><a href="topicalinfo.html">Topical info</a></li>
+    <li><a href="fun.html">Fun</a></li>
+  </ul>
+</footer>
+
+<!-- SCRIPT AND ICONS TAKEN FROM IONIC.IO/IONICONS-->
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+</body>
+</html> 
